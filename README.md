@@ -19,6 +19,21 @@ copyAnArray([1, 2, 3]);
 //[1,2,3]
 ```
 
+##### Copy an array with Map object
+```js
+const copyAnArray = (items) => {
+	return new Map(items.entries());
+}
+
+var mapInstance = copyAnArray([1, 2, 3]);
+mapInstance.forEach(function(a,b,c){console.log(a,b,c)})
+/*
+1 0 Map { 0: 1, 1: 2, 2: 3 } 
+2 1 Map { 0: 1, 1: 2, 2: 3 } 
+3 2 Map { 0: 1, 1: 2, 2: 3 }
+*/
+```
+
 ##### Splice from Array
 ```js
 const splice = (items, start, deleteCount, ...newItems) => {
